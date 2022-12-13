@@ -1,0 +1,42 @@
+.btn {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+h3.false {
+    text-align: center;
+    color: orangered;
+}
+
+h3.true {
+    text-align: center;
+    color: green;
+}
+
+h3.c {
+    text-align: center;
+}
+
+h2.c {
+    text-align: center;
+}
+
+input[type="text"] {
+    margin: 0 auto;
+    display: block;
+    width: 25%;
+}
+
+input[type="password"] {
+    margin: 0 auto;
+    display: block;
+    width: 25%;
+}
+
+label.label-error {
+    display: block;
+    text-align: center;
+    color: orangered;
+}

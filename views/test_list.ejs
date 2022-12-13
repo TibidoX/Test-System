@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Добро пожаловать</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+    <form method="get" >
+        <h2 class="c">Выберите тест</h2>
+        <% for (let i = 0; i < result.length; i++) {%>
+            <p><button class="btn" formmethod="get" formaction="/<%=result[i][0]%>"> <%=result[i][1]%> </button></p>
+        <%}%>
+        <hr>
+        <p><button class="btn" type="submit" formaction="/logout/p">Выйти</button></p>
+    </form>
+</div>
+</body>
+</html>

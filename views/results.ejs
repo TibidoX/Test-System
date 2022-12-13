@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Результат</title>
+    <link rel='stylesheet' href='../../stylesheets/table.css' />
+    <link rel='stylesheet' href='../../stylesheets/style.css' />
+</head>
+<body>
+<div >
+    <form method="get" >
+        <h2 align="center"> Результат </h2>
+        <table class="datatable">
+            <thead> <th>Вопрос</th> <th>Ваш ответ</th>  </thead>
+            <tbody>
+            <%var flag = true%>
+            <% for(let i = 0; i < result.length; i++) {%>
+                <% if (result[i][1]) {%>
+                <tr class="true">
+                    <td><%=i+1 %></td>
+                    <td>Верно</td>
+                </tr>
+                <%} else {%>
+                <tr class="false">
+                    <td><%=i+1 %></td>
+                    <td>Неверно</td>
+                </tr>
+                <%flag=false%>
+                <%}
+            %>
+            <%}
+            %>
+            </tbody>
+        </table>
+        <%if (flag) {%>
+            <h3 class="true">Тест пройден!</h3>
+        <%} else {%>
+            <h3 class="false">Вы не прошли тест!</h3>
+        <%}%>
+
+        <button class="btn" formmethod="get" formaction="/test_list" >На главную</button>
+    </form>
+</div>
+</body>
+</html>
